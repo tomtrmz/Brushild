@@ -1,0 +1,838 @@
+$blue: #0EC3CC;
+$orange: #FDBD4F;
+$text-color: #5a5959;
+
+
+*{
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    background: #f5f5f5;
+}
+
+.tab, .mob {
+    display: none;
+}
+
+a {
+    color: inherit;
+}
+
+.cta:hover {
+    padding: 4px 14px;
+    transition: 0.3s;
+}
+
+.nav {
+    width: 100%;
+    background: $blue;
+    height: 70px;
+    position: fixed;
+    transition: .5s;
+    z-index: 5;
+    &__logo{
+        height: 50px;
+        padding: 10px 33px;
+        transition: .5s;
+    }
+    &__links {
+        display: inline;
+        list-style-type: none;
+        float: right;
+        color: #fff;
+        padding-top: 24px;
+        transition: .5s;
+        font-weight: 700;
+        &--item {
+            display: inline;
+            margin-right: 39px;
+        }
+        &--link {
+            text-decoration: none;
+            font-size: 16px;
+            &:hover {
+                border-bottom: 3px solid #fff;
+                padding-bottom: 5px;
+                transition: .1s;
+            }
+        }
+        &--cta {
+            display: inline;
+            text-decoration: none;
+            margin-right: 39px;
+            font-size: 16px;
+            padding: 6px 11px;
+            border-radius: 25px;
+            border: 2px solid #fff;
+            &:hover {
+                padding: 9px 11px;
+                transition: .3s;
+            }
+        }
+    }
+}
+
+.nav-scroll {
+    background: #fff !important;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.16);
+}
+
+.links-scroll {
+    color: $blue;
+}
+
+.cta-scroll {
+    border: 2px solid $blue;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: url('../img/header.png') no-repeat center top;
+    background-size: cover;
+    clear: both;
+    position: relative;
+    &__anim {
+        display: inline-block;
+        position: relative;
+        width: 60%;
+        top: 6%;
+        left: 0;
+    }
+    &__title {
+        position: absolute;
+        display: inline-block;
+        top: 190px;
+        right: 110px;
+        font-size: 68px;
+        text-align: center;
+        color: $blue;
+    }
+}
+
+.title {
+    width: 1280px;
+    margin: 0 auto;
+    color: $blue;
+    padding: 80px 0 20px;
+    font-size: 48px;
+}
+.subtitle {
+    width: 1280px;
+    margin: 0 auto;
+    color: $text-color;
+    font-size: 26px;
+    padding-bottom: 110px;
+}
+
+.presentation, .meet, .available {
+    width: 1280px;
+    height: 552px;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-bottom: 100px;
+    position: relative;
+    &__background {
+        width: 100%;
+        height: 100%;
+        background: url('../img/1.jpg') no-repeat;
+        background-size: cover;
+    }
+    &__connect {
+        width: 336px;
+        background: #fff;
+        padding: 55px 40px 60px 30px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        position: absolute;
+        left: 66px;
+        top: -40px;
+        border-radius: 5px;
+        &--title {
+            font-size: 26px;
+            padding-bottom: 20px;
+            color: $text-color;
+        }
+        &--text {
+            color: $text-color;
+            padding-bottom: 27px;
+        }
+        &--cta {
+            text-decoration: none;
+            color: $blue;
+            font-weight: 700;
+            padding: 2px 14px;
+            border-radius: 15px;
+            border: 2px solid $blue;
+        }
+    }
+}
+
+.colors, .brush {
+    width: 1280px;
+    height: 552px;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-bottom: 100px;
+    position: relative;
+    &__background {
+        width: 100%;
+        height: 100%;
+        background: url('../img/2.jpg');
+        background-size: cover;
+    }
+    &__block {
+        width: 336px;
+        background: #fff;
+        padding: 55px 40px 60px 30px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        position: absolute;
+        float: right;
+        right: 70px;
+        top: -40px;
+        border-radius: 5px;
+        &--title {
+            font-size: 26px;
+            padding-bottom: 20px;
+            color: $text-color;
+        }
+        &--text {
+            color: $text-color;
+            padding-bottom: 27px;
+        }
+        &--cta {
+            text-decoration: none;
+            color: $blue;
+            font-weight: 700;
+            padding: 2px 14px;
+            border-radius: 15px;
+            border: 2px solid $blue;
+        }
+    }
+}
+
+.smile {
+    width: 100%;
+    height: 630px;
+    //background: url('../img/intro-app.png') $orange no-repeat center;
+    //background-size: contain;
+    background: $orange;
+    margin-bottom: 20px;
+}
+
+.meet-title {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 80px 0 50px;
+    color: $blue;
+    font-size: 50px;
+}
+
+.meet-intro {
+    width: 1280px;
+    margin: 0 auto;
+    color: $text-color;
+    padding-bottom: 114px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.meet {
+    &__background {
+        background: url('../img/pirate.png') no-repeat bottom $blue;
+        background-size: cover;
+    }
+}
+
+.brush {
+    &__background {
+        background: url('../img/dance.png') no-repeat center;
+        background-size: cover;
+    }
+}
+
+.available {
+    &__background {   
+        background: url('../img/mockup.png') no-repeat bottom $blue;
+        background-size: cover;
+    }
+}
+
+.order {
+    width: 100%;
+    margin: 0 auto 100px;
+    &__subtitle {
+        color: $orange;
+        font-size: 50px;
+        text-align: center;
+    }
+    &__products {
+        display: flex;
+        justify-content: center;
+    }
+    &__item {
+        text-align: center;
+        &--name {
+            font-size: 20px; 
+            color: $text-color;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+        &--buy {
+            color: #fff;
+            background: $blue;
+            font-size: 20px;
+            padding: 11px 76px 13px;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+    }
+}
+
+.register {
+    //background: url('../img/intro-app.png') $orange no-repeat right;
+    background: $orange;
+    background-size: contain;
+    width: 100%;
+    padding: 61px 0 68px;
+    margin: 0 auto; 
+    position: relative;
+    &__title {
+        width: 1280px;
+        margin: 0 91px;
+        color: #fff;
+        padding: 0 0 20px;
+        font-size: 52px;
+    }
+    &__text {
+        width: 680px;
+        margin: 0 81px;
+        color: #fff;
+        padding: 0 0 60px;
+        font-size: 26px;
+        font-weight: 600;        
+    }
+    &__form {
+        &--input {
+            width: 590px;
+            height: 50px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+            border-radius: 30px;
+            background-color: #fff;
+            padding-left: 25px;
+            font-size: 18px;
+            color: $text-color;
+            border: none;
+            margin-left: 80px;
+            outline: none;
+            &::placeholder {
+                opacity: .35;
+            }
+        }
+        &--validate {
+            color: #fff;
+            cursor: pointer;
+            font-size: 18px;
+            background: $blue;
+            padding: 13px 45px 12px;
+            border-radius: 30px;
+            position: relative;
+            right: 153px;
+            margin-bottom: 50px;
+            outline: none;
+            border: none;
+            transition: .2s;
+            -webkit-appearance: none;
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+    &__error {
+        color: red;
+        width: 400px;
+        position: relative;
+        left: 90px;
+        bottom: 30px;
+        font-size: 22px;
+    }
+    &__success {
+        color: $text-color;
+        width: 400px;
+        position: relative;
+        left: 90px;
+        bottom: 30px;
+        font-size: 22px;
+    }
+    &__anim--desktop {
+        display: inline-block;
+        width: 50%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+.footer {
+    width: 100%;
+    margin: 0 auto 120px;
+    display: flex;
+    justify-content: space-around;
+    &__list {
+        list-style: none;
+        display: inline-block;
+        padding-top: 120px;
+        &--item {
+            font-size: 18px;
+            color: $text-color;
+            padding-bottom: 10px;
+            &-head {
+                font-weight: 600;
+                font-size: 22px;
+                color: $text-color;
+                padding-bottom: 16px;
+            }
+        }
+    }
+    &__download {
+        padding: 120px 0 16px;
+        width: 40%;
+        &--head {
+            font-weight: 600;
+            font-size: 22px;
+            color: $text-color;
+            padding-bottom: 16px;
+        }
+        &--appstore, &--googleplay {
+            width: 126px;
+            height: 40px;
+        }
+    }
+}
+
+.copyright {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 16px;
+    opacity: .35;
+}
+
+@media screen and (max-width: 1023px) {
+    body {
+        overflow-x: hidden; 
+        width: 768px;
+        margin: 0 auto;
+    }
+
+    .desk {
+        display: none;
+    }
+
+    .tab {
+        display: initial;
+    }
+
+    .title, .subtitle, .presentation, .meet, .available, .colors, .brush, .meet-title, .meet-intro, .register__title {
+        width: 100%;
+    }
+    .nav {
+        width: 768px;
+        &__links {
+            float: none;
+            position: absolute;
+            &--item {
+                margin-right: 35px;
+            }
+        }
+    }
+    .header {
+        &__anim {
+            top: 10%;
+        }
+    }
+    .title, .subtitle, .meet-title, .meet-intro {
+        margin-left: 20px;
+        width: calc(100% - 20px);
+    }
+    .subtitle {
+        padding-bottom: 50px;
+    }
+    .presentation, .meet, .available {
+        height: initial;
+        &__background {
+            height: 432px;
+            background-repeat: no-repeat;
+            background-position-y: 0px;
+            background-size: contain;
+        }
+        &__connect {
+            width: calc(100% - 70px);
+            left: 0;
+            text-align: center;
+            padding: 35px 40px 30px 30px;
+            position: relative;
+            top: initial;
+            &--text {
+                width: 383px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .colors, .brush {
+        height: initial;
+        &__background {
+            height: 512px;
+            background-repeat: no-repeat;
+            background-position-y: 0px;
+            background-size: contain;
+        }
+        &__block {
+            width: calc(100% - 70px);
+            left: 0;
+            text-align: center;
+            padding: 35px 40px 30px 30px;
+            position: relative;
+            top: initial;
+            float: none;
+            &--text {
+                width: 383px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .brush {
+        &__block {
+            top: -90px;
+        }
+    }
+
+    .meet-title {
+        padding: 60px 0 50px;
+    }
+    .meet-intro {
+        padding-bottom: 84px;
+    }
+
+    .register {
+        background-image: none;
+        background-color: $orange;
+        &__anim--tab {
+            display: block;
+            width: 50%;
+            right: 0;
+            margin: 0 auto;
+            top: 0;
+        }
+        &__pic {
+            display: block;
+            width: 100%;
+        }
+        &__title {
+            text-align: center;
+            margin: 0;
+        }
+        &__text {
+            text-align: center;
+            width: 100%;
+            margin: 0;
+        }
+        &__form {
+            &--input {
+                width: 510px;
+                margin-left: 103px;
+            }
+            &--validate {
+                position: absolute;
+                right: 133px;
+                margin-top: 3px;
+            }
+        }
+        &__error, &__success {
+            left: 110px;
+            bottom: -20px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .desk {
+        display: none;
+    }
+    .mob {
+        display: initial;
+    }
+
+    body {
+        width: 100%;
+    }
+
+    .nav {
+        width: 100%;
+        &__logo {
+            height: 50px;
+            padding: 10px;
+            position: absolute;
+            left: 37%;
+        }
+        &__links {
+            float: right;
+            position: relative;
+            &--item {
+                padding-right: 10px;
+                margin: 0;
+            }
+            &--cta {
+                margin: 0;
+            }
+        }
+    }
+
+    .header {
+        &__anim {
+            margin: 0 auto;
+            top: 20%;
+        }
+    }
+
+    .title {
+        font-size: 32px;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    .subtitle {
+        font-size: 20px;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    .presentation, .meet, .available {
+        &__background {
+            width: 100%;
+            height: 0;
+            padding-top: 56.4%;
+        }
+        &__connect {
+            &--text {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+
+    .colors, .brush {
+        &__block {
+            &--text {
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+
+    .colors {
+        &__background {
+            padding-top: 67%;
+            height: 0;
+        }
+    }
+
+    .brush {
+        &__background {
+            padding-top: 58%;
+            height: 0;
+        }
+        &__block {
+            top: -10px;
+        }
+    }
+
+    .smile {
+        height: 280px;
+    }
+
+    .meet-title {
+        padding: 60px 0 15px;
+        font-size: 34px;
+        text-align: center;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .meet-intro {
+        font-size: 18px;
+        text-align: center;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .register {
+        &__title {
+            font-size: 31px;
+            width: 95%;
+        }
+        &__text {
+            width: 90%;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+        &__form {
+            &--input {
+                width: 90%;
+                margin: 0 auto;
+                display: block;
+                font-size: 13px;
+                padding-left: 20px;
+                height: 42px;
+            }
+            &--validate {
+                position: absolute;
+                right: 2.5%;
+                margin-top: -45px;
+                font-size: 13px;
+                padding: 13px 33px 12px;
+            }
+        }
+        &__error, &__success {
+            width: 320px;
+            left: 0;
+            margin-left: 13px;
+            font-size: 18px;
+        }
+    }
+
+    .footer {
+        flex-direction: column;
+        margin: 0 auto 60px;
+        &__list {
+            padding: 60px 0 0;
+            text-align: center;
+        }
+        &__download {
+            width: 100%;
+            padding: 60px 0 15px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+
+    // Burger menu
+    .nav {
+        .b-a {
+            transition: all .25s;
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 6px;
+            width: 30px;
+            border-radius: 15px;
+            background-color: $orange;
+         }
+         .menu-collapsed {
+            transition: all .25s;
+            position: fixed;
+            top: 10px;
+            left: 9px;
+            height: 36px;
+            width: 36px;
+            z-index: 1;
+            cursor: pointer;
+            ul {
+               transition: all 0s;
+               position: fixed;
+               left: -9000px;
+            }
+         }
+         .bar {
+            @extend .b-a;
+            position: fixed;
+            left: 12px;
+            top: 24px;
+            &:before {
+               @extend .b-a;
+               top: -8px;
+            }
+            &:after {
+               @extend .b-a;
+               top: 8px;
+            }
+         }
+         .b-a-expanded {
+            transition: all .25s;
+            top: -0px;
+         }
+         .menu-expanded {
+            transition: all .25s;
+            text-align: center;
+            line-height: 200px;
+            height: 100%;
+            width: 100%;
+            border-radius: 0px;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.85);
+            ul {
+               transition: all 0s;
+               position: relative;
+               left: 0;
+               z-index: 2;
+               list-style-type: none;
+               padding: 0;
+               li {
+                   height: 100px;
+               }
+            }
+            a {
+               transition: all .15s;
+               text-decoration: none;
+               font-size: 18px;
+               padding: 5px;
+               color: #fff;
+               display:block;
+               &:hover {
+                  background-color:rgba(white, .8);
+                  transition: all .15s;
+                  letter-spacing: 2px;
+                  color:#333;
+                  border: 1px solid rgba(255, 255, 255, .15);
+               }
+            }
+            .bar {
+               background-color: transparent;
+               transition: all .25s;
+               &:before {
+                  @extend .b-a-expanded;
+                  transform: rotate(45deg);
+               }
+               &:after {
+                  @extend .b-a-expanded;
+                  transform: rotate(-45deg);
+               }
+            }
+         }
+         .row {
+            padding-top:150px;
+         }
+         h1 {
+            font-size: 3em;
+         }
+         h3 {
+            color:#999;
+         }
+         p {
+            line-height: 160%;
+            letter-spacing:1px;
+         }
+    }
+}
